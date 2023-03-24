@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:id="@+id/input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"
+            tools:ignore="MissingConstraints">
+
+            <EditText
+                android:id="@+id/textFstNum"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/border"
+                android:hint="First Number"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"
+                android:textColor="#8041FF"
+                android:textColorHint="#8041FF"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/textScdNum"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border"
+                android:textColorHint="#8041FF"
+                android:hint="Second Number"
+                android:inputType="numberDecimal"
+                android:paddingLeft="10dp"
+                android:textColor="#8041FF"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/input_layout">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="102dp"
+                tools:ignore="MissingConstraints">
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/btnAdd"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="Add"
+                        android:textSize="18dp"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:id="@+id/btnSub"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="Substract"
+                        android:textSize="18dp"
+                        android:layout_weight="1"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/btnMul"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="Multiply"
+                        android:textSize="18dp"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:id="@+id/btnDiv"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="Divide"
+                        android:textSize="18dp"
+                        android:layout_weight="1"/>
+
+                </TableRow>
+
+                <TableRow>
+
+                    <Button
+                        android:id="@+id/btnMod"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="Mod"
+                        android:textSize="18dp"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:id="@+id/btnPow"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="Pow"
+                        android:textSize="18dp"
+                        android:layout_weight="1"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/result_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/button_layout"
+            android:layout_marginVertical="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/border">
+
+            <TextView
+                android:id="@+id/textFstOper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="First Number"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textOperator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="Operator"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/textScdOper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="Second Number"
+                android:textSize="20dp" />
+
+
+            <TextView
+                android:id="@+id/textResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="30dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:text="Result"
+                android:textStyle="bold"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
